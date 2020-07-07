@@ -63,11 +63,13 @@ namespace OPCUAPubFlattener
         public string DoFlatten(string jsonmessage)
         {
             string resultString = "{}";
-
+            Console.WriteLine($"Message length = {jsonmessage.Length}");
             if (jsonmessage != null && jsonmessage.Length > 2)
             {
-                if (jsonmessage.StartsWith('['))
+                if (jsonmessage.StartsWith('[')){
+                    Console.WriteLine($" Starts with [ ");
                     resultString = this.DoStandardFlattening(JArray.Parse(jsonmessage));
+                }
                 else if (jsonmessage.StartsWith('{'))
                 {
                     JArray opcNodes = new JArray();
@@ -85,6 +87,8 @@ namespace OPCUAPubFlattener
 
             JObject result = this.OutputTemplate != null ? (JObject)this.OutputTemplate.DeepClone() : new JObject();
             DateTime latest = DateTime.MinValue;
+            Console.WriteLine($" Total Nodes = {nodes.Count}");
+            Console.WriteLine($" Total Mappings = {this.DisplayNames.Count}");
 
             foreach (var nodeEntry in nodes)
             {
@@ -101,6 +105,7 @@ namespace OPCUAPubFlattener
                     {
                         displayname = this.DisplayNames[anode[this.NodeIdPropertyname].ToString()];
                     }
+                    Console.WriteLine($" DisplayName = {displayname}");
 
                     result.Add(new JProperty(displayname, anode[VALUEPROPERTYNAME][VALUEPROPERTYNAME]));
 
@@ -161,9 +166,13 @@ namespace OPCUAPubFlattener
             JArray mappings = (JArray)config.GetValue("NodesMapping");
             foreach(var nodeMapping in mappings)
             {
+                
                 string nodeid = ((JProperty)nodeMapping.First).Name;
                 this.DisplayNames.Add(nodeid, nodeMapping[nodeid]["DisplayName"].ToString());
+                Console.WriteLine($"nodeid = {nodeid}");
+                Console.WriteLine($"displayname = {nodeMapping[nodeid]["DisplayName"].ToString()}");
             }
+            
         }
 
         public async Task<string> DoFlattenAsync(string jsonmessage)

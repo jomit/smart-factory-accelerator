@@ -3,7 +3,7 @@ Smart Factory Solution Accelerator
 
 
 Run Simulated OPC Server
-- docker run -it -p 50000:50000 --name="plc1" --network="azure-iot-edge" --hostname="opcplc" mcr.microsoft.com/iotedge/opc-plc -aa
+- sudo docker run --rm -it -p 50000:50000 --name="opcplc" --network="azure-iot-edge" --hostname="opcplc" mcr.microsoft.com/iotedge/opc-plc --autoaccept
 
 
 Build IoT Edge Solution Locally
@@ -16,6 +16,12 @@ Build IoT Edge Solution Locally
 
 Create IoT Central Device Template and Device
 - Copy the scopeid, deviceid and symmetrickey for initializing the edge.
+
+
+
+Install IoT Edge on Ubuntu 16
+
+- https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-linux
 
 
 Install IoT Edge with Linux Containers on Windows

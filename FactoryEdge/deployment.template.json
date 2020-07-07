@@ -70,7 +70,12 @@
                   "true",
                   "--mapping",
                   "/configs/mapping.json"
-                ]
+                ],
+                "HostConfig": {
+                  "Binds": [
+                    "/opcconfigs:/configs"
+                  ]
+                }
               }
             }
           },
@@ -80,16 +85,18 @@
             "status": "running",
             "restartPolicy": "always",
             "settings": {
-              "image": "${MODULES.OPCPublisher}",
+              "image": "mcr.microsoft.com/iotedge/opc-publisher:latest",
               "createOptions": {
                 "Cmd": [
                   "--publishfile=/configs/publishednodes.json",
                   "--autoaccept",
-                  "--trustowncert",
-                  "--opcsamplinginterval=5000",
-                  "--iothubmessagesize=0",
-                  "--iothubsendinterval=0"
-                ]
+                  "--trustowncert"
+                ],
+                "HostConfig": {
+                  "Binds": [
+                    "/opcconfigs:/configs"
+                  ]
+                }
               }
             }
           }
@@ -100,7 +107,7 @@
       "properties.desired": {
         "schemaVersion": "1.0",
         "routes": {
-          "OPCPublisherToFlattener": "FROM /messages/modules/OPCPublisher/outputs/* INTO BrokeredEndpoint(\"/modules/OPCFlattenerModule/inputs/input1\")",
+          "OPCPublisherToFlattener": "FROM /messages/modules/OPCPublisher/* INTO BrokeredEndpoint(\"/modules/OPCFlattenerModule/inputs/input1\")",
           "OPCFlattenerModuleToIoTHub": "FROM /messages/modules/OPCFlattenerModule/outputs/* INTO $upstream"
         },
         "storeAndForwardConfiguration": {
