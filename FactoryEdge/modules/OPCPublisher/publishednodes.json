@@ -1,0 +1,22 @@
+[
+  {
+    "EndpointUrl": "opc.tcp://opcplc:50000",
+    "OpcNodes": [
+      {
+        "Id": "nsu=http://microsoft.com/Opc/OpcPlc/;s=StepUp"
+      },
+      {
+        "Id": "nsu=http://microsoft.com/Opc/OpcPlc/;s=SpikeData"
+      },
+      {
+        "Id": "nsu=http://microsoft.com/Opc/OpcPlc/;s=DipData"
+      },
+      {
+        "Id": "nsu=http://microsoft.com/Opc/OpcPlc/;s=PositiveTrendData"
+      },
+      {
+        "Id": "nsu=http://microsoft.com/Opc/OpcPlc/;s=NegativeTrendData"
+      }
+    ]
+  }
+]

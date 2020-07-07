@@ -1,0 +1,29 @@
+{
+    "NodesMapping": [
+      {
+        "nsu=http://microsoft.com/Opc/OpcPlc/;s=StepUp": {
+          "DisplayName": "StepUp"
+        }
+      },
+      {
+        "nsu=http://microsoft.com/Opc/OpcPlc/;s=SpikeData" : {
+          "DisplayName": "SpikeData"
+        }
+      },
+      {
+        "nsu=http://microsoft.com/Opc/OpcPlc/;s=DipData": {
+          "DisplayName": "DipData"
+        }
+      },
+      {
+        "nsu=http://microsoft.com/Opc/OpcPlc/;s=PositiveTrendData" : {
+          "DisplayName": "PositiveTrendData"
+        }
+      },
+      {
+        "nsu=http://microsoft.com/Opc/OpcPlc/;s=NegativeTrendData": {
+          "DisplayName": "NegativeTrendData"
+        }
+      }
+    ]
+  }
