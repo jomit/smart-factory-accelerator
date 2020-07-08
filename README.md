@@ -14,7 +14,7 @@ This accelerator provides resources to get started with Smart Factory Solutions.
 
 ## Condition based monitoring Solution
 
-![Condition based monitoring architecture](https://raw.githubusercontent.com/jomit/smart-factory-accelerator/master/assets/condition-monitor-architecture.png)
+![Condition based monitoring architecture](assets/condition-monitor-architecture.png)
 
 
 ### Getting Started Guide
@@ -29,7 +29,7 @@ This accelerator provides resources to get started with Smart Factory Solutions.
 
 - Add a Custom Interface with 5 telemetry capabilites as shown below:
 
-![Custom Interface with 5 telemetry capabilites](https://raw.githubusercontent.com/jomit/smart-factory-accelerator/master/assets/img1.png)
+![Custom Interface with 5 telemetry capabilites](assets/img1.png)
 
 - Save and Publish the Template.
 
@@ -67,7 +67,7 @@ edgeAgent           running          Up 15 seconds    mcr.microsoft.com/azureiot
 
 - [Create a new Dashboard](https://docs.microsoft.com/en-us/azure/iot-central/core/howto-add-tiles-to-your-dashboard) and add the tiles for relevant tags: 
 
-![Dashboard](https://raw.githubusercontent.com/jomit/smart-factory-accelerator/master/assets/dashboard.png)
+![Dashboard](assets/dashboard.png)
 
 #### 5. Setup Alerts
 
