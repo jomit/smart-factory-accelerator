@@ -1,5 +1,4 @@
 {
-  "$schema-template": "2.0.0",
   "modulesContent": {
     "$edgeAgent": {
       "properties.desired": {
@@ -17,7 +16,7 @@
             "type": "docker",
             "settings": {
               "image": "mcr.microsoft.com/azureiotedge-agent:1.0",
-              "createOptions": {}
+              "createOptions": "{}"
             }
           },
           "edgeHub": {
@@ -26,27 +25,7 @@
             "restartPolicy": "always",
             "settings": {
               "image": "mcr.microsoft.com/azureiotedge-hub:1.0",
-              "createOptions": {
-                "HostConfig": {
-                  "PortBindings": {
-                    "5671/tcp": [
-                      {
-                        "HostPort": "5671"
-                      }
-                    ],
-                    "8883/tcp": [
-                      {
-                        "HostPort": "8883"
-                      }
-                    ],
-                    "443/tcp": [
-                      {
-                        "HostPort": "443"
-                      }
-                    ]
-                  }
-                }
-              }
+              "createOptions": "{\"HostConfig\":{\"PortBindings\":{\"5671/tcp\":[{\"HostPort\":\"5671\"}],\"8883/tcp\":[{\"HostPort\":\"8883\"}],\"443/tcp\":[{\"HostPort\":\"443\"}]}}}"
             }
           }
         },
@@ -57,20 +36,8 @@
             "status": "running",
             "restartPolicy": "always",
             "settings": {
-              "image": "${MODULES.OPCFlattenerModule}",
-              "createOptions": {
-                "Cmd" : [ 
-                  "--verbose",
-                  "true",
-                  "--mapping",
-                  "/configs/mapping.json"
-                ],
-                "HostConfig": {
-                  "Binds": [
-                    "/opcconfigs:/configs"
-                  ]
-                }
-              }
+              "image": "jomit/opcflattenermodule:0.0.4-amd64",
+              "createOptions": "{\"Cmd\":[\"--verbose\",\"true\",\"--mapping\",\"/configs/mapping.json\"],\"HostConfig\":{\"Binds\":[\"/opcconfigs:/configs\"]}}"
             }
           },
           "OPCPublisher": {
@@ -80,18 +47,7 @@
             "restartPolicy": "always",
             "settings": {
               "image": "mcr.microsoft.com/iotedge/opc-publisher:latest",
-              "createOptions": {
-                "Cmd": [
-                  "--publishfile=/configs/publishednodes.json",
-                  "--autoaccept",
-                  "--trustowncert"
-                ],
-                "HostConfig": {
-                  "Binds": [
-                    "/opcconfigs:/configs"
-                  ]
-                }
-              }
+              "createOptions": "{\"Cmd\":[\"--publishfile=/configs/publishednodes.json\",\"--autoaccept\",\"--trustowncert\"],\"HostConfig\":{\"Binds\":[\"/opcconfigs:/configs\"]}}"
             }
           }
         }

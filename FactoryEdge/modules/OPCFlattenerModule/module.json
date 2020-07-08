@@ -2,7 +2,7 @@
     "$schema-version": "0.0.1",
     "description": "",
     "image": {
-        "repository": "jomitacr.azurecr.io/opcflattenermodule",
+        "repository": "jomit/opcflattenermodule",
         "tag": {
             "version": "0.0.4",
             "platforms": {
