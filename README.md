@@ -1,6 +1,6 @@
 # Smart Factory Accelerator
 
-This accelerator provides resources to get started with Smart Factory Solutions. The goal of this sample is to showcase how to use fully managed services and serverless components to reduce time to value and infrastuructre management for Industrial IoT architectures.
+This accelerator provides resources to get started with Smart Factory Solutions. The goal of these samples is to showcase how to use fully managed services and serverless components to reduce time to value and infrastuructre management for Industrial IoT architectures.
 
 - [Condition based monitoring Solution](https://github.com/jomit/smart-factory-accelerator#condition-based-monitoring-solution)
 
