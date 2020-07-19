@@ -2,10 +2,6 @@
 
 Table of contents
 1. [Overview](#overview)
-    * Steps
-        * Create the OPCFlattener docker image and push to container registry
-        * Create an IoT Central custom app
-        * Create an IoT Edge device on Ubuntu VM
 2. [Create OPCFlattener docker image](#create-opcflattener-docker-image)
 3. [Create an IoT Central custom app](#create-an-iot-central-custom-app)
     * [Create a new application](#create-a-new-application)
