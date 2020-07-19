@@ -21,7 +21,10 @@ This accelerator provides resources to get started with Smart Factory Solutions.
 
 #### 1. Setup IoT Central
 
-- Create an [IoT Central App](https://docs.microsoft.com/en-us/azure/iot-central/core/quick-deploy-iot-central)
+- Create an IoT Central custom app
+
+    Open https://apps.azureiotcentral.com/build/new/custom in a browser and create a custom app [(screenshot)](./images/create-iotcentral.png) <br>
+    For more info please refer to [IoT Central App](https://docs.microsoft.com/en-us/azure/iot-central/core/quick-deploy-iot-central)
 
 - Create a [Device Template from an IoT Edge manifest](https://docs.microsoft.com/en-us/azure/iot-central/core/tutorial-add-edge-as-leaf-device#create-device-template) using the `edgeDeploymentManifest.json` file.
 
