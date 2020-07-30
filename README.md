@@ -14,6 +14,10 @@ This accelerator provides resources to get started with Smart Factory Solutions.
 - (Other...)
 
 
+## Top Manufacturing Metrics for Reference
+
+![Metrics](metrics.png)
+
 ## Resources
 
 - [Tutorial: Add an Azure IoT Edge device to your Azure IoT Central application](https://docs.microsoft.com/en-us/azure/iot-central/core/tutorial-add-edge-as-leaf-device)
