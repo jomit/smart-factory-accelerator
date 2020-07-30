@@ -4,7 +4,7 @@ This accelerator provides resources to get started with Smart Factory Solutions.
 
 - [Condition based monitoring](https://github.com/jomit/smart-factory-accelerator/tree/master/condition-based-monitoring)
 
-- Anomaly Detection Solution (Coming...)
+- Anomaly Detection (Coming...)
     - [Serverless Anomaly Detection](https://github.com/jomit/anomaly-detection)
 
 - Quality Prediction (Coming...)
