@@ -2,7 +2,7 @@
 
 This accelerator provides resources to get started with Smart Factory Solutions. The goal of these samples is to showcase how to use fully managed services and serverless components to reduce time to value and infrastuructre management for Industrial IoT architectures.
 
-- [Condition based monitoring](https://github.com/jomit/smart-factory-accelerator#condition-based-monitoring-solution)
+- [Condition based monitoring](https://github.com/jomit/smart-factory-accelerator/tree/master/condition-based-monitoring)
 
 - Anomaly Detection Solution (Coming...)
     - [Serverless Anomaly Detection](https://github.com/jomit/anomaly-detection)

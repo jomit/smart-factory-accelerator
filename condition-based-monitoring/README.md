@@ -1,4 +1,4 @@
-# Condition based monitoring Solution
+# Sample Condition based monitoring Solution
 
 ![Condition based monitoring architecture](assets/condition-monitor-architecture.png)
 
@@ -60,7 +60,17 @@ edgeAgent           running          Up 15 seconds    mcr.microsoft.com/azureiot
 
 #### 5. Setup Alerts
 
-- <TODO...>
+##### Using Teams Proactive Messaging
+
+- Create a Rule in IoT Central
+![IoT Central Rule](assets/alert1.png)
+
+- Create a Logic App
+![Logic App](assets/alert2.png)
+
+- Test the alert
+![Teams Message](assets/alert3.png)
+
 
 
 ## Resources
