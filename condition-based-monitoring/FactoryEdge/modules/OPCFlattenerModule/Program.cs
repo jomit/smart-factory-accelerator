@@ -85,8 +85,10 @@ namespace OPCFlattenerModule
             }
 
             var pipeMessage = flattener.DoFlattenMessage(message);
-            pipeMessage.Properties.Add("contentType","application/JSON");
-            pipeMessage.Properties.Add("contentEncoding","utf-8");
+            //pipeMessage.Properties.Add("contentType","application/json");
+            //pipeMessage.Properties.Add("contentEncoding","UTF-8");
+            pipeMessage.ContentEncoding = "UTF-8";
+            pipeMessage.ContentType = "application/json";
             await moduleClient.SendEventAsync("output1", pipeMessage);
             Console.WriteLine("Received message sent");
 
